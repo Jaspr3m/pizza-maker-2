@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css\style.css">
+    <script defer src="js\script.js"></script>
+</head>
+<body>
+    <main>
+        <h1><u>Jasprem's Pizza Maker V.2!</u></h1>
+        <section class="container">
+            <section class="options-tab">
+                <section class="crust-title">
+                    Kies een korst
+                </section>
+                <section class="crust-options">
+                    <button id="thick-crust-button">Thick crust</button>
+                    <button id="thin-crust-button">Thin crust</button>
+                </section>
+                <section class="sauce-title">
+                    Kies een saus (alleen 1)
+                </section>
+                <section class="sauce-options">
+                    <button id="marinara-button">Marinara</button>
+                    <button id="chocolate-button">Peppery Red</button>
+                    <button id="buffalo-button">Buffalo</button>
+                    <button id="bbq-button">BBQ</button>
+                </section>
+                <section class="topping-title">
+                    Kies een topping (alleen 1)
+                </section>
+                <section class="topping-options">
+                    <button id="olive-button">Olive</button>
+                    <button id="anchovis-button">Anchovis</button>
+                    <button id="pepperoni-button">Pepperoni</button>
+                    <button id="pineapple-button">Pineapple</button>
+                    <audio src="audio/wrong.mp3"></audio>
+                </section>
+            </section>
+            <section class="overview-tab">
+                <img id="crust-img" src="img/thick-crust.png" alt="crust" class="crust">
+                <img id="topping-img" src="img/pepperoni.png" alt="topping" class="topping">
+                <img id="sauce-img" src="img/marinara.png" alt="sauce" class="sauce">
+            </section>
+        </section>
+    </main>
+    <footer>
+        <section id="left">
+            <h2 class="heading">Beschrijving website</h2>
+            <p>
+                Dit is een simpel pizza-spel dat ik heb gemaakt met <u>vanilla HTML/CSS/JS</u>
+                Hierboven heb je de feature om verschillende <u>korsten, sauzen, en toppings</u> te kunnen kiezen.
+                Je mag er maar 1 per stuk kiezen, dus je kan niet meerdere toppings tegelijk hebben.
+                <br><br>
+                De UI heeft een update gehad: zwart-wit vormgeving, transitions 
+                voor knoppen, en verbeterde controls onderaan. Met dit project heb ik beter mijn
+                JavaScript capabiliteiten kunnen aanscherpen, en daardoor een beter gevoel voor webdesign gekregen.
+            </p>
+                   </section>
+        <section id="right">
+            <h2 class="heading">Verdere controls</h2>
+            <p>
+                Hieronder kan je je pizza naamgeven, health van hem optellen of aftrekken!
+                Uiteindelijk bestaat er geen pizza met "health" of een "naam", maar ik vond het
+                interessant genoeg om het als feature te implementeren, en ik heb hiermee mijn
+                JavaScript capabiliteiten verder ermee kunnen aanscherpen!
+            </p>
+            <section class="flex-items">
+                <input placeholder="Vul een naam in..." type="text" id="naamPizza">
+                <button id="bevestigNaam">Bevestig naam</button>
+            </section>
+            <section class="flex-items">
+                <progress id="healthBar" value="100" max="100"></progress>
+                <button id="addHealth">Voeg health toe</button>
+                <button id="removeHealth">Trek health af</button>
+            </section>
+            <section class="flex-items">
+                <h2 id="pizzaStatus"></h2>
+                <h3 id="healthChanges"></h3>
+            </section>
+        </section>
+    </footer>
+</body>
+</html>

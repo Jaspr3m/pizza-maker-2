@@ -1,0 +1,249 @@
+body {
+    background-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Beschrijving */
+
+:focus-visible {
+    border: dashed .3em magenta;
+}
+
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+h1 > u {
+    text-decoration-style: double;
+}
+
+main > p {
+    text-align: center;
+    padding-inline: 25%;
+    color: white;
+}
+
+button {
+    color: white;
+    background: black;
+    border: solid .35em white;
+    border-radius: 0.8em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    font-size: medium;
+    color: black;
+    transition: all .3s;
+}
+
+/* ---------------- */
+
+img {
+    position: absolute;
+    z-index: auto;
+}
+
+button {
+    padding: 10px;
+}
+
+.container {
+    display: grid;
+    padding: 1%;
+    margin-inline: 5%;
+    margin-bottom: 1%;
+    border: solid .5em white;
+    border-radius: 1.5em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+/* Enable and Disable omdat er voor allebei de acties een transition moest; kon niet alleen disable */
+
+.disable {
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+/* fix options tab and make it into a flex-box */
+    
+.options-tab {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr;
+    gap: 3%;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "crust-title"
+      "crust-options"
+      "sauce-title"
+      "sauce-options"
+      "topping-title"
+      "topping-options";
+    border-right: solid .5em white;
+}
+
+/* elements regarding titles and clickable items */
+
+.crust-title {
+    color: white;
+    font-weight: 600;
+    grid-area: crust-title; 
+}
+
+.crust-options {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 10px 100px; 
+    grid-template-areas: 
+      ". . . ."; 
+    grid-area: crust-options; 
+    padding-right: 5%; 
+}
+
+.sauce-title {
+    color: white;
+    font-weight: 600;
+    grid-area: sauce-title;
+}
+
+.sauce-options {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 10px 100px; 
+    grid-template-areas: 
+      ". . . ."; 
+    grid-area: sauce-options; 
+    padding-right: 5%; 
+}
+
+.topping-title {
+    color: white;
+    font-weight: 600;
+    grid-area: topping-title;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.topping-options {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr;
+    gap: 10px 100px; 
+    grid-template-areas: 
+      ". . . .";
+    grid-area: topping-options;
+    padding-right: 5%; 
+}
+
+/* tab regarding overview of the pizza */
+
+.overview-tab {
+    display: flex;
+    position: relative;
+    border-left: solid 1px black;
+    align-items: center;
+    justify-content: center;
+    padding: 200px;
+}
+
+.crust {
+    z-index: 0;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+
+.sauce {
+    z-index: 1;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+
+.topping {
+    z-index: 2;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+
+/* --------------------------------------------- */
+
+/* Footer -------------------------------------- */
+
+footer {
+    color: white;
+    display: flex;
+    justify-self: center;
+    border: solid .5em white;
+    width: 60%;
+}
+
+#left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-inline: 1.5%;
+    align-items: center;
+}
+
+#right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-inline: 1.5%;
+}
+
+#right {
+    transition: none;
+}
+
+#left > p, #right > p {
+    font-size: small;
+}
+
+#naamPizza {
+    color: white;
+    font-weight: bold;
+    width: 60%;
+    height: 60%;
+    background-color: black;
+    border: dashed 0.3em white;
+    border-radius: .5em;
+    padding: .4em;
+}
+
+#naamPizza::placeholder {
+    color: white;
+    font-weight: bold;
+}
+
+#healthBar {
+    width: 50%;
+    height: 60%;
+    margin-right: .4em;
+}
+
+.flex-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: .2em;
+    margin: .5em;
+}
+
+.flex-items:nth-of-type(2), .flex-items:nth-of-type(3) {
+    gap: 1em;
+}
+
+
+  
